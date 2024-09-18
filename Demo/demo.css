@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.piano {
+    position: relative;
+    width: 350px;
+    height: 170px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+/* Style for white piano keys */
+.white-key {
+    width: 40px;
+    height: 170px;
+    background-color: white;
+    border: 1px solid #000;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.white-key.active {
+    background-color: rgb(249, 158, 158);
+    color: white;
+}
+
+.white-key span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: black;
+}
+
+/* Style for black piano keys */
+.black-key {
+    width: 25px;
+    height: 115px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.black-key:active {
+    background-color: #333;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: green;
+}
+
