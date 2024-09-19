@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Tonic Triad (I) Demo</h1>
+        <p>Click the keys to play individual notes, or click the button below to play the C major tonic triad (C, E, G):</p>
+        
+        <div class="piano">
+            <!-- White keys -->
+            <div class="white-key" id="C4" onclick="playNote('C4')"><span>C</span></div>
+            <div class="white-key" id="D4" onclick="playNote('D4')"><span>D</span></div>
+            <div class="white-key" id="E4" onclick="playNote('E4')"><span>E</span></div>
+            <div class="white-key" id="F4" onclick="playNote('F4')"><span>F</span></div>
+            <div class="white-key" id="G4" onclick="playNote('G4')"><span>G</span></div>
+            <div class="white-key" id="A4" onclick="playNote('A4')"><span>A</span></div>
+            <div class="white-key" id="B4" onclick="playNote('B4')"><span>B</span></div>
+            <div class="white-key" id="C5" onclick="playNote('C5')"><span>C</span></div>
+            <div class="white-key" id="D4" onclick="playNote('D5')"><span>D</span></div>
+            <div class="white-key" id="E5" onclick="playNote('E5')"><span>E</span></div>
+            
+            <!-- Black keys -->
+            <div class="black-key" style="left: 22px;" onclick="playNote('C#4')"></div>
+            <div class="black-key" style="left: 57px;" onclick="playNote('D#4')"></div>
+            <div class="black-key" style="left: 127px;" onclick="playNote('F#4')"></div>
+            <div class="black-key" style="left: 162px;" onclick="playNote('G#4')"></div>
+            <div class="black-key" style="left: 197px;" onclick="playNote('A#4')"></div>
+            <div class="black-key" style="left: 268px;" onclick="playNote('C#5')"></div>
+            <div class="black-key" style="left: 303px;" onclick="playNote('D#5')"></div>
+        </div>
+
+        <!-- Tonic Triad button -->
+        <button id="playButton" onclick="playTonicTriad()">Click here to Play Tonic Triad (C Major)</button>
+    </div>
+
+    <script src="demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    border: 2px solid #0c1b3e;
+    padding: 100px;
+    width: 600px;
+    background-color: white;
+}
+
+h2 {
+    margin-top: -80px;
+    margin-bottom: 80px;
+    color: #000000;
+    text-align: center; 
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    border: 2px solid #0c1b3e; 
+    padding: 10px; 
+    background-color: #f0f0f0; 
+    border-radius: 0; 
+    width: 100px; 
+    margin-top: -10px; 
+    margin-left: auto;
+}
+
+button.chord {
+    background-color: #e4f0f5;
+    border: 2px solid #0c1b3e;
+    border-radius: 10px;
+    width: 50px;  
+    height: 35px;  
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.chord:hover {
+    background-color: #d1e9f2;
+}
+
+/*tonic_triad */
+
+#tonic_triad #I-button {
+    position: relative; 
+}
+
+#tonic_triad #I-button::after {
+    content: "╳ "; 
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: red; 
+    font-size: 40px; 
+    z-index: 1;
+    pointer-events: none; 
+}
+
+/*supertonic_triad*/
+
+#supertonic_triad #I-button,
+#supertonic_triad #ii-button,
+#supertonic_triad #iii-button,
+#supertonic_triad #IV-button,
+#supertonic_triad #vi-button
+ {
+    position: relative; 
+}
+
+#supertonic_triad #I-button::after,
+#supertonic_triad #ii-button::after,
+#supertonic_triad #iii-button::after,
+#supertonic_triad #IV-button::after,
+#supertonic_triad #vi-button::after
+ {
+    content: "╳ "; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: red; 
+    font-size: 40px; 
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+/*mediant-triad*/
+
+#mediant_triad #I-button,
+#mediant_triad #iii-button,
+#mediant_triad #V-button,
+#mediant_triad #vii-button
+ {
+    position: relative; 
+}
+
+#mediant_triad #I-button::after,
+#mediant_triad #iii-button::after,
+#mediant_triad #V-button::after,
+#mediant_triad #vii-button::after
+ {
+    content: "╳ "; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: red; 
+    font-size: 40px; 
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+
+/*subdominant_triad*/
+
+#subdominant_triad #iii-button,
+#subdominant_triad #IV-button,
+#subdominant_triad #vi-button
+ {
+    position: relative; 
+}
+
+#subdominant_triad #iii-button::after,
+#subdominant_triad #IV-button::after,
+#subdominant_triad #vi-button::after
+ {
+    content: "╳ "; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: red; 
+    font-size: 40px; 
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+/*dominant_triad*/
+
+#dominant_triad #ii-button,
+#dominant_triad #iii-button,
+#dominant_triad #IV-button,
+#dominant_triad #V-button,
+#dominant_triad #vii-button
+
+ {
+    position: relative; 
+}
+
+#dominant_triad #ii-button::after,
+#dominant_triad #iii-button::after,
+#dominant_triad #IV-button::after,
+#dominant_triad #V-button::after,
+#dominant_triad #vii-button::after
+ {
+    content: "╳ "; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: red; 
+    font-size: 40px; 
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+/*submediant-triad*/
+
+#submediant_triad #I-button,
+#submediant_triad #vi-button,
+#submediant_triad #vii-button
+ {
+    position: relative; 
+}
+
+#submediant_triad #I-button::after,
+#submediant_triad #vi-button::after,
+#submediant_triad #vii-button::after
+ {
+    content: "╳ "; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: red; 
+    font-size: 40px; 
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+/*leading_tone_triad*/
+
+#leading_tone_triad #ii-button,
+#leading_tone_triad #iii-button,
+#leading_tone_triad #IV-button,
+#leading_tone_triad #V-button,
+#leading_tone_triad #vi-button,
+#leading_tone_triad #vii-button
+
+ {
+    position: relative; 
+}
+
+#leading_tone_triad #ii-button::after,
+#leading_tone_triad #iii-button::after,
+#leading_tone_triad #IV-button::after,
+#leading_tone_triad #V-button::after,
+#leading_tone_triad #vi-button::after,
+#leading_tone_triad #vii-button::after
+
+
+ {
+    content: "╳ "; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: red; 
+    font-size: 40px; 
+    z-index: 1; 
+    pointer-events: none; 
+}
