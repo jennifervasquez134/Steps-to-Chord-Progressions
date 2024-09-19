@@ -1,12 +1,9 @@
-// Check if the major button exists before adding an event listener
 const majorButton = document.getElementById("major-button");
 if (majorButton) {
   majorButton.addEventListener("click", function () {
     window.location.href = "major_keys.html";
   });
 }
-
-// Check for other buttons similarly
 const IButton = document.getElementById("I-button");
 if (IButton) {
   IButton.addEventListener("click", function () {
