@@ -1,27 +1,57 @@
-document.getElementById("I-button").addEventListener("click", function() {
+// Check if the major button exists before adding an event listener
+const majorButton = document.getElementById("major-button");
+if (majorButton) {
+  majorButton.addEventListener("click", function () {
+    window.location.href = "major_keys.html";
+  });
+}
+
+// Check for other buttons similarly
+const IButton = document.getElementById("I-button");
+if (IButton) {
+  IButton.addEventListener("click", function () {
     window.location.href = "tonic_triad.html";
-});
+  });
+}
 
-document.getElementById("ii-button").addEventListener("click", function() {
+const iiButton = document.getElementById("ii-button");
+if (iiButton) {
+  iiButton.addEventListener("click", function () {
     window.location.href = "supertonic_triad.html";
-});
+  });
+}
 
-document.getElementById("iii-button").addEventListener("click", function() {
+const iiiButton = document.getElementById("iii-button");
+if (iiiButton) {
+  iiiButton.addEventListener("click", function () {
     window.location.href = "mediant_triad.html";
-});
+  });
+}
 
-document.getElementById("IV-button").addEventListener("click", function() {
+const IVButton = document.getElementById("IV-button");
+if (IVButton) {
+  IVButton.addEventListener("click", function () {
     window.location.href = "subdominant_triad.html";
-});
+  });
+}
 
-document.getElementById("V-button").addEventListener("click", function() {
+const VButton = document.getElementById("V-button");
+if (VButton) {
+  VButton.addEventListener("click", function () {
     window.location.href = "dominant_triad.html";
-});
+  });
+}
 
-document.getElementById("vi-button").addEventListener("click", function() {  
+const viButton = document.getElementById("vi-button");
+if (viButton) {
+  viButton.addEventListener("click", function () {
     window.location.href = "submediant_triad.html";
-});
+  });
+}
 
-document.getElementById("vii-button").addEventListener("click", function() {
+const viiButton = document.getElementById("vii-button");
+if (viiButton) {
+  viiButton.addEventListener("click", function () {
     window.location.href = "leading_tone_triad.html";
-});
+  });
+}
