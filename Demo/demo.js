@@ -1,40 +1,51 @@
-// Function to play individual notes
-function playNote(note) {
-    const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease(note, '8n');
+let currentSynth;
+let isPlaying = false;
+let currentButton;
+let playTimeout;
 
-    // Highlight the key being played
-    highlightKey(note);
+function createSynth() {
+    return new Tone.PolySynth(Tone.Synth).toDestination();
 }
 
-// Function to play the tonic triad (C major: C4, E4, G4)
-function playTonicTriad() {
-    const synth = new Tone.PolySynth(Tone.Synth).toDestination();
-    const tonicTriad = ['C4', 'E4', 'G4'];
-    synth.triggerAttackRelease(tonicTriad, '2n');
+function toggleSound(button, notes) {
+    if (isPlaying && currentButton === button) {
+        stopSound();
+    } else {
+        if (isPlaying) {
+            stopSound();
+        }
 
-    // Highlight the keys of the tonic triad
-    highlightKeys(tonicTriad);
+        playTriad(button, notes);
+    }
 }
 
-// Function to highlight individual keys
-function highlightKey(note) {
-    const keyElement = document.getElementById(note);
-    keyElement.classList.add('active');
-    setTimeout(() => keyElement.classList.remove('active'), 500);
+function playTriad(button, notes) {
+    if (currentSynth) currentSynth.dispose(); 
+    currentSynth = createSynth();
+    currentSynth.triggerAttack(notes); 
+    isPlaying = true;
+    currentButton = button; 
+    button.querySelector('.icon').textContent = 'II'; 
+
+    playTimeout = setTimeout(() => {
+        stopSound();
+    }, 3000);
 }
 
-// Function to highlight multiple keys (e.g. for chords)
-function highlightKeys(notes) {
-    notes.forEach(note => {
-        const keyElement = document.getElementById(note);
-        keyElement.classList.add('active');
-    });
+function stopSound() {
+    if (currentSynth) {
+        currentSynth.triggerRelease(); 
+        currentSynth.dispose();
+        currentSynth = null; 
+    }
+    clearTimeout(playTimeout); 
+    isPlaying = false; 
 
-    setTimeout(() => {
-        notes.forEach(note => {
-            const keyElement = document.getElementById(note);
-            keyElement.classList.remove('active');
-        });
-    }, 1500); 
+    resetButtonIcon(currentButton);
+}
+
+function resetButtonIcon(button) {
+    if (button) {
+        button.querySelector('.icon').textContent = '▶'; 
+    }
 }
