@@ -3,40 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEMO</title>
+    <title>Triad Sounds</title>
     <link rel="stylesheet" href="demo.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
 </head>
 <body>
+    
     <div class="container">
-        <h1>Tonic Triad (I) Demo</h1>
-        <p>Click the keys to play individual notes, or click the button below to play the C major tonic triad (C, E, G):</p>
-        
-        <div class="piano">
-            <!-- White keys -->
-            <div class="white-key" id="C4" onclick="playNote('C4')"><span>C</span></div>
-            <div class="white-key" id="D4" onclick="playNote('D4')"><span>D</span></div>
-            <div class="white-key" id="E4" onclick="playNote('E4')"><span>E</span></div>
-            <div class="white-key" id="F4" onclick="playNote('F4')"><span>F</span></div>
-            <div class="white-key" id="G4" onclick="playNote('G4')"><span>G</span></div>
-            <div class="white-key" id="A4" onclick="playNote('A4')"><span>A</span></div>
-            <div class="white-key" id="B4" onclick="playNote('B4')"><span>B</span></div>
-            <div class="white-key" id="C5" onclick="playNote('C5')"><span>C</span></div>
-            <div class="white-key" id="D4" onclick="playNote('D5')"><span>D</span></div>
-            <div class="white-key" id="E5" onclick="playNote('E5')"><span>E</span></div>
-            
-            <!-- Black keys -->
-            <div class="black-key" style="left: 22px;" onclick="playNote('C#4')"></div>
-            <div class="black-key" style="left: 57px;" onclick="playNote('D#4')"></div>
-            <div class="black-key" style="left: 127px;" onclick="playNote('F#4')"></div>
-            <div class="black-key" style="left: 162px;" onclick="playNote('G#4')"></div>
-            <div class="black-key" style="left: 197px;" onclick="playNote('A#4')"></div>
-            <div class="black-key" style="left: 268px;" onclick="playNote('C#5')"></div>
-            <div class="black-key" style="left: 303px;" onclick="playNote('D#5')"></div>
+        <h1>Tonic Triad</h1>
+        <div class="button-group">
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['E5', 'G4', 'C4', 'C3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">E5<br>G4<br>C4<br>C3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['G4', 'E4', 'C4'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">G4<br>E4<br>C4</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['C5', 'G4', 'C4', 'E3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">C5<br>G4<br>C4<br>E3</span>
+            </div>
         </div>
 
-        <!-- Tonic Triad button -->
-        <button id="playButton" onclick="playTonicTriad()">Click here to Play Tonic Triad (C Major)</button>
+        <h1>Supertonic Triad</h1>
+        <div class="button-group">
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['D5', 'F4', 'A3', 'D3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">D5<br>F4<br>A3<br>D3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['F4', 'A3', 'F3', 'D3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">F4<br>A3<br>F3<br>D3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['A4', 'A3', 'D3', 'F2'])">
+                    <span class="icon">▶</span> 
+                </button>
+                <span class="key-label">A4<br>A3<br>D3<br>F2</span>
+            </div>   
+        </div>
+
+        <h1>Mediant Triad</h1>
+        <div class="button-group">
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['E5', 'G4', 'B3','E3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">E5<br>G4<br>B3<br>E3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['G4', 'B3','G3', 'E3'])"> 
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">G4<br>B3<br>G3<br>E3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['B4', 'G4', 'G3', 'E3'])">
+                    <span class="icon">▶</span> 
+                </button>
+                <span class="key-label">B4<br>G4<br>G3<br>E3</span>
+            </div>
+        </div>
+
+        <h1>Subdominant Triad</h1>
+        <div class="button-group">
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['F5', 'A4', 'C4', 'F3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">F5<br>A4<br>C4<br>F3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['A4', 'C4','A3', 'F2'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">A4<br>C4<br>A3<br>F2</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['F4', 'C4', 'C4', 'A3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">F4<br>C4<br>C4<br>A3</span>
+            </div>
+        </div>
+
+        <h1>Dominant Triad</h1>
+        <div class="button-group">
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['B4', 'D4', 'G3', 'G2'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">B4<br>D4<br>G3<br>G2</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['D5', 'D4', 'B3', 'G3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">D5<br>D4<br>B3<br>G3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['G4', 'D4', 'G3', 'B2'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">G4<br>D4<br>G3<br>B2</span>
+            </div>
+        </div>
+
+        <h1>Submediant Triad</h1>
+        <div class="button-group">
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['A4', 'E4', 'C4', 'A2'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">A4<br>E4<br>C4<br>A2</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['E5','C5', 'C4', 'A3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">E5<br>C5<br>C4<br>A3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['C5','E4', 'E3', 'A2'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">C5<br>E4<br>E3<br>A2</span>
+            </div>
+        </div>
+
+        <h1>Leading Tone Triad</h1>
+        <div class="button-group">
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['D5', 'F4','B3','D3' ])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">D5<br>F4<br>B3<br>D3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['B4', 'F4','D4', 'D3'])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">B4<br>F4<br>D4<br>D3</span>
+            </div>
+            <div class="button-container">
+                <button class="sound-button" onclick="toggleSound(this, ['F5','B4','F4', 'D3' ])">
+                    <span class="icon">▶</span>
+                </button>
+                <span class="key-label">F5<br>B4<br>F4<br>D3</span>
+            </div>
+        </div>
     </div>
 
     <script src="demo.js"></script>
