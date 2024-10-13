@@ -1,51 +1,22 @@
-let currentSynth;
-let isPlaying = false;
-let currentButton;
-let playTimeout;
+const synth = new Tone.PolySynth(Tone.Synth).toDestination();
 
-function createSynth() {
-    return new Tone.PolySynth(Tone.Synth).toDestination();
+function playChord(chord) {
+    const notes = chord.split(','); 
+    synth.triggerAttackRelease(notes, '2n'); 
 }
 
-function toggleSound(button, notes) {
-    if (isPlaying && currentButton === button) {
-        stopSound();
-    } else {
-        if (isPlaying) {
-            stopSound();
-        }
+document.querySelectorAll('.key').forEach(key => {
+    key.addEventListener('mousedown', () => {
+        const notes = key.getAttribute('data-notes'); 
+        playChord(notes);
+    });
+    key.addEventListener('touchstart', (e) => {
+        e.preventDefault(); 
+        const notes = key.getAttribute('data-notes');
+        playChord(notes);
+    });
+});
 
-        playTriad(button, notes);
-    }
-}
-
-function playTriad(button, notes) {
-    if (currentSynth) currentSynth.dispose(); 
-    currentSynth = createSynth();
-    currentSynth.triggerAttack(notes); 
-    isPlaying = true;
-    currentButton = button; 
-    button.querySelector('.icon').textContent = 'II'; 
-
-    playTimeout = setTimeout(() => {
-        stopSound();
-    }, 3000);
-}
-
-function stopSound() {
-    if (currentSynth) {
-        currentSynth.triggerRelease(); 
-        currentSynth.dispose();
-        currentSynth = null; 
-    }
-    clearTimeout(playTimeout); 
-    isPlaying = false; 
-
-    resetButtonIcon(currentButton);
-}
-
-function resetButtonIcon(button) {
-    if (button) {
-        button.querySelector('.icon').textContent = '▶'; 
-    }
-}
+document.addEventListener('mousedown', () => {
+    Tone.start();
+});
