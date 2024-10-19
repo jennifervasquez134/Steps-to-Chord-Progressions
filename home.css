@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background: linear-gradient(120deg, #d4f0f0, #fceabb);
   display: flex;
   flex-direction: column;
@@ -135,7 +135,7 @@ ul.bullets li::before {
   margin: auto;
 }
 .footer {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background-color: #ffe57a;
   text-align: center;
   padding: 10px;
@@ -154,11 +154,11 @@ ul.bullets li::before {
   text-decoration: underline;
 }
 header {
-  background-color: #00a7c4;
+  background-color: #62c1d5;
   padding: 20px;
   text-align: center;
-  color: white;
-  font-size: 24px;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
   font-weight: bold;
   display: flex;
   align-items: center;
