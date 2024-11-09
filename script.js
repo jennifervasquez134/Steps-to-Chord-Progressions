@@ -126,7 +126,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   if (!emailPattern.test(emailInput)) {
     event.preventDefault();  
     alert("Please enter a valid email address.");
-  }
+  } 
 });
 
 
