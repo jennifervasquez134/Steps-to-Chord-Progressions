@@ -63,6 +63,7 @@ button {
   letter-spacing: 1px;
   margin: 5px 0;
   text-transform: none;
+  position: relative;
 }
 
 button:hover {
@@ -90,6 +91,7 @@ button.chord {
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
 }
+
 
 
 

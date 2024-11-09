@@ -252,6 +252,7 @@ button.chord {
 
 #minor_subtonic_triad #i-mrbutton,
 #minor_subtonic_triad #ii-mrbutton,
+#minor_subtonic_triad #iv-mrbutton,
 #minor_subtonic_triad #vi-mrbutton,
 #minor_subtonic_triad #vii1-mrbutton,
 #minor_subtonic_triad #vii2-mrbutton {
@@ -260,6 +261,7 @@ button.chord {
 
 #minor_subtonic_triad #i-mrbutton::after,
 #minor_subtonic_triad #ii-mrbutton::after,
+#minor_subtonic_triad #iv-mrbutton::after,
 #minor_subtonic_triad #vi-mrbutton::after,
 #minor_subtonic_triad #vii1-mrbutton::after,
 #minor_subtonic_triad #vii2-mrbutton::after {
@@ -280,6 +282,7 @@ button.chord {
 #minor_leading_tone_triad #ii-mrbutton,
 #minor_leading_tone_triad #iii-mrbutton,
 #minor_leading_tone_triad #iv-mrbutton,
+#minor_leading_tone_triad #v-mrbutton,
 #minor_leading_tone_triad #vi-mrbutton,
 #minor_leading_tone_triad #vii1-mrbutton,
 #minor_leading_tone_triad #vii2-mrbutton {
@@ -289,6 +292,7 @@ button.chord {
 #minor_leading_tone_triad #ii-mrbutton::after,
 #minor_leading_tone_triad #iii-mrbutton::after,
 #minor_leading_tone_triad #iv-mrbutton::after,
+#minor_leading_tone_triad #v-mrbutton::after,
 #minor_leading_tone_triad #vi-mrbutton::after,
 #minor_leading_tone_triad #vii1-mrbutton::after,
 #minor_leading_tone_triad #vii2-mrbutton::after {

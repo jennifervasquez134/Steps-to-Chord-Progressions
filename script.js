@@ -119,5 +119,14 @@ if (viiButtonMinor) {
 }
 
 
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  const emailInput = document.getElementById("email").value;
+  const emailPattern = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,6}$/;
+
+  if (!emailPattern.test(emailInput)) {
+    event.preventDefault();  
+    alert("Please enter a valid email address.");
+  }
+});
 
 

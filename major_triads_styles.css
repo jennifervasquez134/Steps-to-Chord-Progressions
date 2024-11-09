@@ -149,14 +149,14 @@ button.chord {
 
 #major_mediant_triad #I-button,
 #major_mediant_triad #iii-button,
-#major_mediant_triad #V-button,
+#major_mediant_triad #vi-button,
 #major_mediant_triad #vii-button {
     position: relative; 
 }
 
 #major_mediant_triad #I-button::after,
 #major_mediant_triad #iii-button::after,
-#major_mediant_triad #V-button::after,
+#major_mediant_triad #vi-button::after,
 #major_mediant_triad #vii-button::after {
     content: "╳"; 
     position: absolute;
@@ -220,12 +220,14 @@ button.chord {
 }
 
 #major_submediant_triad #I-button,
+#major_submediant_triad #iii-button,
 #major_submediant_triad #vi-button,
 #major_submediant_triad #vii-button {
     position: relative; 
 }
 
 #major_submediant_triad #I-button::after,
+#major_submediant_triad #iii-button::after,
 #major_submediant_triad #vi-button::after,
 #major_submediant_triad #vii-button::after {
     content: "╳"; 
