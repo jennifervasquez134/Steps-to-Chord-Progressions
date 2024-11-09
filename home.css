@@ -1,0 +1,246 @@
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #c4e3e1, #ffe57a);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #d4f0f0, #fceabb);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 20px;
+  width: 600px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 200px;
+}
+
+.container:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+h2 {
+  margin-bottom: 30px;
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+button {
+  padding: 25px 30px;
+  border: none;
+  background: linear-gradient(135deg, #c4e3e1, #ffe57a);
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 140px;
+  height: 80px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: #62c1d5;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.maj-button {
+  background: #12b0d0;
+  color: #000000;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+.maj-button:hover {
+  background: linear-gradient(135deg, #62c1d5, #ffc008);
+}
+
+.min-button {
+  background: #ffc008;
+  color: #000000;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.min-button:hover {
+  background: linear-gradient(135deg, #ffc008, #62c1d5);
+}
+
+ul.bullets {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 40px;
+}
+
+ul.bullets li {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  position: relative;
+  padding-left: 30px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+ul.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header {
+  background-color: #6ec5d1;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header .logo {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.footer {
+  background-color: #6ec5d1;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  bottom: 0;
+  margin-top: 50px;
+}
+
+.footer .contact {
+  text-align: left;
+  font-size: 20px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.footer .other-links {
+  text-align: left;
+  font-size: 20px;
+  margin: 5px 0;
+  padding-left: 20px;
+}
+
+.footer .footer-logo {
+  padding-left: 20px;
+  font-size: 60px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #fbdf8c;
+  padding: 2px 0;
+  position: fixed;
+  width: 100%;
+  top: 60px; /* Adjusted for header */
+  z-index: 5;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-list li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.nav-list a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-size: 16px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: #d4f0f0;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffe57a;
+  min-width: 180px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #d4f0f0;
+}  
