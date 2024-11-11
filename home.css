@@ -37,7 +37,6 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-
 h2 {
   margin-bottom: 30px;
   color: rgb(0, 0, 0);
@@ -70,6 +69,11 @@ button {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, background 0.3s ease;
+}
+.logo img {
+  width: 200px;
+  height: auto;
+  margin-top: -20px;
 }
 
 button:hover {
@@ -186,7 +190,7 @@ ul.bullets li::before {
   padding: 2px 0;
   position: fixed;
   width: 100%;
-  top: 60px; /* Adjusted for header */
+  top: 120px; /* Adjusted for header */
   z-index: 5;
 }
 
@@ -243,4 +247,4 @@ ul.bullets li::before {
 
 .dropdown-content a:hover {
   background-color: #d4f0f0;
-}  
+}
