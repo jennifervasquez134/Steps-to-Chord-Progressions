@@ -135,6 +135,14 @@ body {
   padding-top: 120px; /* Pushes content down */
 }
 
+.about-layout {
+  margin: 40px;
+  gap: 150px;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 120px; /* Pushes content down */
+}
+
 .contact-image img {
   width: 550px;
   height: auto;
@@ -162,7 +170,8 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
@@ -181,7 +190,7 @@ input, textarea {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
-  background: linear-gradient(135deg,  #0dafd0, #ffc008);
+  background: linear-gradient(135deg, #0dafd0, #ffc008);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
@@ -193,7 +202,7 @@ input, textarea {
 }
 
 .submit-btn:hover {
-  background: linear-gradient(135deg,  #ffc008, #0dafd0);
+  background: linear-gradient(135deg, #ffc008, #0dafd0);
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
@@ -220,5 +229,3 @@ textarea {
   width: 100%;
   margin-top: auto;
 }
-
-
