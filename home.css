@@ -30,7 +30,7 @@ body {
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin: auto;
-  margin-top: 200px;
+  margin-top: 400px;
 }
 
 .container:hover {
@@ -95,7 +95,7 @@ button:active {
 }
 
 .maj-button:hover {
-  background: linear-gradient(135deg, #62c1d5, #ffc008);
+  background: linear-gradient(45deg, #62c1d5, #ffc008);
 }
 
 .min-button {
@@ -159,7 +159,7 @@ ul.bullets li::before {
   padding: 10px 0;
   width: 100%;
   bottom: 0;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .footer .contact {
@@ -190,7 +190,7 @@ ul.bullets li::before {
   padding: 2px 0;
   position: fixed;
   width: 100%;
-  top: 120px; /* Adjusted for header */
+  top: 120px; 
   z-index: 5;
 }
 
