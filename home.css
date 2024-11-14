@@ -5,7 +5,6 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(135deg, #c4e3e1, #ffe57a);
 }
 
 html,
@@ -13,7 +12,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(120deg, #d4f0f0, #fceabb);
+  background: linear-gradient(135deg, #d4f0f0, #fceabb);
   display: flex;
   flex-direction: column;
 }
@@ -30,7 +29,7 @@ body {
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin: auto;
-  margin-top: 400px;
+  margin-top: 500px;
 }
 
 .container:hover {
@@ -71,9 +70,9 @@ button {
   transition: transform 0.3s ease, background 0.3s ease;
 }
 .logo img {
-  width: 200px;
+  width: 250px;
   height: auto;
-  margin-top: -20px;
+  margin-top: -5px;
 }
 
 button:hover {
@@ -95,7 +94,7 @@ button:active {
 }
 
 .maj-button:hover {
-  background: linear-gradient(45deg, #62c1d5, #ffc008);
+  background: linear-gradient(135deg, #62c1d5, #ffc008);
 }
 
 .min-button {
@@ -137,7 +136,7 @@ ul.bullets li::before {
 }
 
 .header {
-  background-color: #6ec5d1;
+  background-color: #62c1d5;
   color: rgb(0, 0, 0);
   text-align: center;
   padding: 20px 0;
@@ -153,8 +152,8 @@ ul.bullets li::before {
 }
 
 .footer {
-  background-color: #6ec5d1;
-  color: rgb(0, 0, 0);
+  background: #62c1d5;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 10px 0;
   width: 100%;
@@ -162,36 +161,28 @@ ul.bullets li::before {
   margin-top: 60px;
 }
 
-.footer .contact {
-  text-align: left;
-  font-size: 20px;
-  margin: 0;
-  padding-left: 20px;
-}
-
-.footer .other-links {
-  text-align: left;
-  font-size: 20px;
-  margin: 5px 0;
-  padding-left: 20px;
-}
-
-.footer .footer-logo {
-  padding-left: 20px;
-  font-size: 60px;
-  text-align: left;
-  font-weight: bold;
-  margin-top: 10px;
+.footer-logo img {
+  max-width: 50%;
+  height: auto;
+  margin-top: -20px ;
+  margin-bottom: -40px;
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: #fbdf8c;
-  padding: 2px 0;
+  background: linear-gradient(120deg, 
+  #ffe57a 0%, 
+  #c4e3e1 20%, 
+  #ffe57a 40%,
+  #c4e3e1 60%,
+  #ffe57a 80%, 
+  #c4e3e1 100%);
+  padding: 4px 0;
   position: fixed;
   width: 100%;
-  top: 120px; 
+  top: 200px; 
   z-index: 5;
+  margin-top: -10px;
 }
 
 .nav-list {
