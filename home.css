@@ -97,7 +97,8 @@ button:active {
   background: linear-gradient(135deg, #62c1d5, #ffc008);
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgb(0, 0, 0);
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, background 0.3s ease;
+ 
 }
 
 .min-button {
@@ -111,7 +112,7 @@ button:active {
   background: linear-gradient(135deg, #ffc008, #62c1d5);
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgb(0, 0, 0);
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, background 0.3s ease;
 }
 
 ul.bullets {
@@ -174,6 +175,7 @@ ul.bullets li::before {
   margin-bottom: -40px;
 }
 
+/* Navbar Styles */
 .navbar {
   background: linear-gradient(120deg, 
   #ffe57a 0%, 
@@ -256,3 +258,4 @@ ul.bullets li::before {
 .dropdown-content a:hover {
   background-color: #d4f0f0;
 }
+
