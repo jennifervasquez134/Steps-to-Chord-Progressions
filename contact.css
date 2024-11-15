@@ -17,7 +17,7 @@
 }
 
 .logo img {
-  max-width: 180px; /* Adjust size as needed */
+  max-width: 300px; 
   height: auto;
 }
 
@@ -75,7 +75,7 @@
   gap: 150px;
   width: 100%;
   max-width: 1200px;
-  padding-top: 120px; /* Pushes content down */
+  padding-top: 30px; 
 }
 
 .about-layout {
@@ -83,7 +83,7 @@
   gap: 150px;
   width: 100%;
   max-width: 1200px;
-  padding-top: 120px; /* Pushes content down */
+  padding-top: 40px; 
 }
 
 .contact-image img {
@@ -145,13 +145,14 @@ textarea {
 }
 
 .submit-btn:hover {
-  background: linear-gradient(135deg, #ffc008, #0dafd0);
+  background: #0dafd0;
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .submit-btn:active {
   transform: scale(1);
+  background: #ffc008;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -188,7 +189,7 @@ textarea {
 }
 
 .footer-logo img {
-  max-width: 200px;
+  max-width: 250px;
   height: auto;
   margin: 10px 0;
 }
