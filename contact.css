@@ -17,7 +17,7 @@
 }
 
 .logo img {
-  max-width: 300px; 
+  max-width: 180px;
   height: auto;
 }
 
@@ -75,7 +75,7 @@
   gap: 150px;
   width: 100%;
   max-width: 1200px;
-  padding-top: 30px; 
+  padding-top: 30px;
 }
 
 .about-layout {
@@ -83,7 +83,7 @@
   gap: 150px;
   width: 100%;
   max-width: 1200px;
-  padding-top: 40px; 
+  padding-top: 40px;
 }
 
 .contact-image img {
