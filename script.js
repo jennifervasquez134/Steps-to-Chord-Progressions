@@ -4,6 +4,7 @@ if (majorButton) {
     window.location.href = "major_keys.html";
   });
 }
+
 const IButton = document.getElementById("I-button");
 if (IButton) {
   IButton.addEventListener("click", function () {
@@ -52,7 +53,6 @@ if (viiButton) {
     window.location.href = "major_leading_tone_triad.html";
   });
 }
-
 
 const mrButton = document.getElementById("minor-button"); 
 if (mrButton) {
@@ -103,7 +103,6 @@ if (viButtonMinor) {
   });
 }
 
-// Subtonic button for minor
 const subtonicButton = document.getElementById("vii1-mrbutton");
 if (subtonicButton) {
   subtonicButton.addEventListener("click", function () {
@@ -118,7 +117,6 @@ if (viiButtonMinor) {
   });
 }
 
-
 document.getElementById("contactForm").addEventListener("submit", function(event) {
   const emailInput = document.getElementById("email").value;
   const emailPattern = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,6}$/;
@@ -126,7 +124,46 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   if (!emailPattern.test(emailInput)) {
     event.preventDefault();  
     alert("Please enter a valid email address.");
-  } 
+  }
 });
 
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  const botCheck = document.querySelector('input[name="botcheck"]:checked');
+  if (botCheck) {
+    alert("Bot detected! Form submission blocked.");
+    event.preventDefault(); 
+  }
+});
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const successContainer = document.getElementById('successContainer');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); 
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        form.style.display = 'none'; 
+        successContainer.style.display = 'block'; 
+
+        setTimeout(() => {
+          successContainer.style.display = 'none';
+          form.reset(); 
+          form.style.display = 'block'; 
+        }, 3000); 
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('An unexpected error occurred. Please try again later.');
+    }
+  });
+});
