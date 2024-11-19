@@ -29,15 +29,45 @@ h2 {
 h2:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+.NavContainer {
+  position: absolute;
+  top: 80px;
+  left: 25px;
+  display: flex;
+  gap: 15px;
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(103, 103, 103);
+}
+
+.NavContainer a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.NavContainer a:hover {
+  background-color: #fbbc00;
+  color: #000000;
+}
+
 .containerImages h3 {
   text-align: left;
 }
+
 .containerImages {
   padding: 20px;
   width: 20%;
-  width: 100%; /* Makes the image fill the container */
+  width: 100%; 
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin-left: 150px;
+  margin-top: 400px;
 }
 
 .container {
