@@ -8,6 +8,7 @@ body {
   background: white;
   position: relative;
 }
+
 .header {
   background-color: #62c1d5;
   color: rgb(0, 0, 0);
@@ -19,7 +20,7 @@ body {
   font-size: 30px;
   font-weight: bold;
   line-height: 1.2;
-  z-index: 5; /* Ensures header stays above navbar */
+  z-index: 5; 
 }
 
 .logo img {
@@ -40,8 +41,8 @@ body {
   padding: 4px 0;
   position: fixed;
   width: 100%;
-  top: 145px; /* Matches the height of the header */
-  z-index: 5; /* Stacks below the header */
+  top: 145px; 
+  z-index: 5; 
 }
 
 .nav-list {
@@ -119,7 +120,7 @@ h2 {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   position: absolute;
-  top: 200px;
+  top: 220px;
   left: 50%;
   transform: translateX(-50%);
   background: #fbbc00;
@@ -134,15 +135,15 @@ h2:hover {
 
 .NavContainer {
   position: absolute;
-  top: 200px;
+  top: 280px;
   left: 25px;
   display: flex;
   gap: 15px;
-  background-color: #f4f4f4;
+  background-color: #f9edca;
   padding: 10px 20px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgb(103, 103, 103);
+  box-shadow: 0 4px 6px rgb(226, 225, 225);
 }
 
 .NavContainer a {
@@ -169,7 +170,7 @@ h2:hover {
   width: 100%;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin-left: 150px;
-  margin-top: 400px;
+  margin-top: 50rem;
 }
 
 .container {
@@ -181,6 +182,8 @@ h2:hover {
   border-radius: 25px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin-right: 150px;
+  margin-top: 30rem;
+
 }
 
 .container:hover {
