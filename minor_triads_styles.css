@@ -245,9 +245,10 @@ button.chord {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
 }
+
 .footer {
   position: absolute;
-  bottom: -550px; /* Move it 20px below the screen */
+  bottom: -40rem; 
   width: 100%;
   background-color: #62c1d5;
   color: #f3f3f3;
