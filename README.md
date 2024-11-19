@@ -7,3 +7,5 @@ Updated all the files
 added nav bar
 added contact page
 needs to work on the about page
+
+Added Navigation to pages
