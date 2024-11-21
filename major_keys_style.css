@@ -64,7 +64,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #62c1d5, #ffc008);
+  background: #62c1d5;
   color: #fff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.80);
   letter-spacing: 1px;
@@ -95,6 +95,7 @@ button.chord {
   transition: background-color 0.3s ease;
   color: #000;
   font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .header {
@@ -193,7 +194,7 @@ button.chord {
 
 .footer {
   position: absolute;
-  margin-bottom:-70rem;
+  margin-bottom:-80rem;
   width: 100%;
   background-color: #62c1d5;
   color: #f3f3f3;
