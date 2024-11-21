@@ -98,6 +98,12 @@ button.chord {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.chord img {
+  width: 50px;
+  height: 30px;
+  object-fit: cover;
+}
+
 .header {
   background-color: #62c1d5;
   color: rgb(0, 0, 0);
@@ -221,3 +227,8 @@ button.chord {
   height: auto;
   margin: 10px 0;
 }
+
+
+
+
+
