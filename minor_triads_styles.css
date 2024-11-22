@@ -206,22 +206,21 @@ h3 {
 }
 
 button {
-  padding: 5px 5px;
+  padding: 10px;
   border: none;
   border-radius: 50px;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
   background: linear-gradient(135deg, #ffc008, #ffc008);
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgb(20, 20, 20);
   letter-spacing: 1px;
   text-transform: none;
   margin: 5px 0;
 }
 
 button:hover {
-  background: yellow;
+  background: #ffc008;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
@@ -244,6 +243,12 @@ button.chord {
   color: #000;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
+}
+
+.chord img {
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .footer {
@@ -487,4 +492,20 @@ button:disabled {
   background-color: #9a9898;
   color: #000000;
   cursor: not-allowed;
+}
+
+button#iii-mrbutton:disabled:hover img {
+  content: url('assets/chord/disIII.jpg'); 
+}
+
+button#v-mrbutton:disabled:hover img {
+  content: url('assets/chord/disV.jpg'); 
+}
+
+button#vi-mrbutton:disabled:hover img {
+  content: url('assets/chord/disVI.jpg');
+}
+
+button#vii1-mrbutton:disabled:hover img {
+  content: url('assets/chord/disVII.jpg'); 
 }
