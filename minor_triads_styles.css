@@ -136,7 +136,7 @@ h2:hover {
 .NavContainer {
   position: absolute;
   top: 220px;
-  left: 25px;
+  left: 60px;
   display: flex;
   gap: 15px;
   background-color: #f9edca;
@@ -168,9 +168,15 @@ h2:hover {
   padding: 20px;
   width: 20%;
   width: 100%;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin-left: 150px;
-  margin-top: 50rem;
+  margin-top: 35rem;
+}
+
+.containerImages img {
+  width: 400px; 
+  height: auto; 
+  max-width: 100%; 
+  margin-top: 30px;
 }
 
 .container {
@@ -181,8 +187,8 @@ h2:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  margin-right: 150px;
-  margin-top: 35rem;
+  margin-right: 180px;
+  margin-top: 40rem;
 }
 
 .container:hover {
@@ -199,10 +205,12 @@ h2:hover {
 
 h3 {
   margin: 10px 0;
-  color: #000000;
+  color: #000;
   font-size: 20px;
   text-align: center;
   width: 100%;
+  font-weight: normal;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 button {
