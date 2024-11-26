@@ -39,10 +39,25 @@ body {
 h2 {
   margin-bottom: 30px;
   color: rgb(0, 0, 0);
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  background:  #d4f0f0;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  border-left: 5px solid #4a90e2;
+  box-shadow: 0px 1px 2px  rgb(0, 0, 0);
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .button-container {
@@ -158,6 +173,92 @@ ul.bullets li::before {
   line-height: 1.2;
 }
 
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(120deg, 
+  #ffe57a 0%, 
+  #c4e3e1 20%, 
+  #ffe57a 40%,
+  #c4e3e1 60%,
+  #ffe57a 80%, 
+  #c4e3e1 100%);
+  padding: 4px 0;
+  position: fixed;
+  width: 100%;
+  top: 200px; 
+  z-index: 5;
+  margin-top: -10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-list li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.nav-list a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-size: 16px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 4px;
+  transition: all 0.3s ease;  
+}
+
+.nav-list a:hover {
+  background-color: #d4f0f0;
+  color: #000000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffe57a;
+  min-width: 180px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #d4f0f0;
+}
+
+
 .footer {
   background: #62c1d5;
   color: rgb(255, 255, 255);
@@ -258,4 +359,5 @@ ul.bullets li::before {
 .dropdown-content a:hover {
   background-color: #d4f0f0;
 }
+
 
