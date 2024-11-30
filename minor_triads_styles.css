@@ -136,8 +136,8 @@ h2:hover {
 .NavContainer {
   position: relative; 
   display: inline-block; 
-  margin-top: -200px;
-  margin-left: 50px;
+  margin-top: -180px;
+  margin-left: 100px;
 }
 
 .back-arrow {
@@ -200,35 +200,126 @@ h2:hover {
   transform: scale(1.1); 
 }
 
-.containerImages h3 {
-  text-align: left;
-}
-
 .containerImages {
   padding: 20px;
-  width: 20%;
   width: 100%;
   margin-left: 150px;
-  margin-top: 35rem;
+  margin-top: 50rem; 
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 20px; 
+}
+
+.containerImages h3 {
+  text-align: left;
+  line-height: 1.2; 
+  margin: 10px 0; 
+  font-weight: normal;
+}
+
+.containerImages p {
+  text-align: left;
+  margin: 70px 0 10px; 
+  font-weight: normal;
+}
+
+.containerImages .highlighted {
+  color: red;
+  font-weight: normal; 
 }
 
 .containerImages img {
-  width: 400px; 
+  width: 500px; 
   height: auto; 
   max-width: 100%; 
-  margin-top: 30px;
+}
+
+.containerImages .image-container {
+  margin: -2px 0;
+  padding: 0;    
+}
+
+.containerImages .chord-image {
+  display: block;    
+  margin: 0 auto; 
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  cursor: grab; 
+  max-width: 100%; 
+  margin: 1rem auto;
+  transition: border 0.3s ease, transform 0.3s ease; 
+}
+
+.chord-image {
+  display: block;
+  width: 100%;
+  height: auto; 
+  max-width: 100%; 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 182, 182, 0.849); 
+  opacity: 0;
+  pointer-events: none; 
+  transition: opacity 0.3s ease; 
+  animation: colorCycle 3s infinite alternate; 
+}
+
+@keyframes colorCycle {
+  0% {
+      background-color: rgba(255, 87, 87, 0.3); 
+  }
+  20% {
+      background-color: rgba(255, 215, 87, 0.4); 
+  }
+  40% {
+      background-color: rgba(87, 173, 255, 0.5); 
+  }
+  60% {
+      background-color: rgba(147, 112, 219, 0.4); 
+  }
+  80% {
+      background-color: rgba(87, 255, 131, 0.3); 
+  }
+  100% {
+      background-color: rgba(255, 87, 87, 0.3); 
+  }
+}
+
+
+.image-container.active .overlay {
+  opacity: 1;
+}
+
+.image-container:active {
+  transform: scale(1); 
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  cursor: grabbing; 
+  border: 10px solid transparent; 
+  border-radius: 30px; 
+  background-image: linear-gradient(45deg, #ff9c08, #e6ff08); 
+  background-clip: border-box;
+  box-shadow: 0 10px 15px rgb(0, 0, 0), 0 0 15px  rgb(255, 192, 8); 
+  animation: border-animation 10s ease-in-out infinite alternate; 
 }
 
 .container {
-  padding: 20px;
-  width: 20%;
+  padding: 30px;
+  width: 400px;
   text-align: center;
   background: #f9edca;
   box-shadow: 0px 1px 2px  rgb(0, 0, 0);
   border-radius: 25px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  margin-right: 180px;
-  margin-top: 40rem;
+  margin-right: 200px;
+  margin-top: 50rem;
 }
 
 .container:hover {
@@ -243,14 +334,13 @@ h2:hover {
   margin-top: 20px;
 }
 
-h3 {
+h4 {
   margin: 10px 0;
-  color: #000;
+  color: #000000;
   font-size: 20px;
   text-align: center;
-  font-weight:bold ;
   width: 100%;
-  font-weight: normal;
+  font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -558,4 +648,3 @@ button#vi-mrbutton:disabled:hover img {
 button#vii1-mrbutton:disabled:hover img {
   content: url('assets/chord/disVII.jpg'); 
 }
-
