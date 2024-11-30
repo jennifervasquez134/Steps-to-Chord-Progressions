@@ -6,6 +6,8 @@
     <title>Mediant Triad</title>
     <link rel="stylesheet" href="major_triads_styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.1.3/Tone.js"></script>
+
   </head>
 
   <body id="major_mediant_triad">
@@ -59,21 +61,26 @@
     </div>
 
     <div class="containerImages">
-      <h3>Suprano: \(\hat{3}\) \(\hat{5}\) \(\hat{7}\)</h3>
-      <h3>Bass: \(\hat{3}\)</h3>
-      <h3>Inversions: iii</h3>
-      <h3>Root position only</h3>
-      <h3>Doubling: All acceptable; doubling the root is most common.</h3>
-      <img src="assets/major images/C3.jpg" alt="Description of image" />
-      <h3>C: iii iii iii</h3>
-      <h3>\((\hat{3}\) \(\hat{3}\) \(\hat{5}\) \(\hat{7}\))
-          \(\quad(\hat{3}\) \(\hat{5}\) \(\hat{5}\) \(\hat{7}\))
-          \(\quad(\hat{3}\) \(\hat{5}\) \(\hat{7}\) \(\hat{7}\))</h3>
+      <h3>Soprano:&emsp;&emsp;&nbsp;\(\hat{3}\)&emsp;&emsp;\(\hat{5}\)&emsp;&emsp;\(\hat{7}\)</h3>
+      <h3>Bass: &emsp;&emsp;&emsp;&nbsp;&nbsp;\(\hat{3}\)</h3>
+      <h3>Inversions:&emsp;&nbsp;&nbsp;iii</h3>
+      <h3><em>&emsp;&emsp;&emsp;Root position only</em></h3>
+      <p>Doubling: All acceptable; doubling the root is most common.</p>
+
+      <div class="image-container" data-note="E5,G4,B3,E3;G4,B3,G3,E3;B4,G4,G3,E3">
+        <img src="assets/major images/C3.jpg" alt="Chord Map" class="chord-image">
+        <div class="overlay"></div>
+    </div>
+
+      <h3>&nbsp;&emsp;&emsp;C: iii&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;iii&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;iii</h3>
+      <h3>&nbsp;&emsp;&emsp;\((\hat{3}\)\(\hat{3}\)\(\hat{5}\)\(\hat{7}\))
+        &nbsp;&emsp;&emsp;\(\quad(\hat{3}\)\(\hat{5}\)\(\hat{5}\)\(\hat{7}\))
+        &nbsp;&emsp;&emsp;\(\quad(\hat{3}\)\(\hat{5}\)\(\hat{7}\)\(\hat{7}\))</h3>
     </div>
 
     <div class="container">
       <div>
-        <h3>Following Chord</h3>
+        <h4>Following Chord</h4>
       </div>
       <div class="buttons">
 
@@ -124,7 +131,8 @@
         <p>&copy; 2024 Steps to Chord Progressions | All Rights Reserved.</p>
       </div>
     </div>
-    
+
+    <script src="audio.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
