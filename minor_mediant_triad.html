@@ -6,6 +6,8 @@
     <title>Mediant Triad</title>
     <link rel="stylesheet" href="minor_triads_styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.1.3/Tone.js"></script>
+
   </head>
   <body id="minor_mediant_triad">
     <div class="header">
@@ -58,22 +60,26 @@
     </div>
 
     <div class="containerImages">
-      <h3>Suprano:\(\hat{3}\) \(\hat{5}\) \(\hat{7}\)</h3>
-      <h3>Do not raise the leading tone</h3>
-      <h3>Bass:\(\hat{3}\)</h3>
-      <h3>Inversions: III</h3>
-      <h3>Root position only</h3>
-      <h3>Doubling: All acceptable; doubling the root is most common.</h3>
-      <img src="assets/minor images/E3.jpeg" alt="Description of image" />
-      <h3>c: III  III  III</h3>
-      <h3>\((\hat{3}\) \(\hat{3}\) \(\hat{5}\) \(\hat{7}\))
-         \(\quad(\hat{3}\) \(\hat{3}\) \(\hat{5}\) \(\hat{7}\))
-          \(\quad(\hat{3}\) \(\hat{3}\) \(\hat{5}\) \(\hat{7}\))</h3>
+      <h3>Suprano:&emsp;&emsp;&nbsp;\(\hat{3}\)&emsp;&emsp;\(\hat{5}\)&emsp;&emsp;\(\hat{7}\)</h3>
+      <h3><em>&emsp;&emsp;&emsp;Do not raise the leading tone</em></h3>
+      <h3>Bass: &emsp;&emsp;&emsp;&nbsp;&nbsp;\(\hat{3}\)</h3>
+      <h3>Inversions:&emsp;&nbsp;III</h3>
+      <h3><em>&emsp;&emsp;&emsp;Root position only</em></h3>
+      <p>Doubling: All acceptable; doubling the root is most common.</p>
+
+      <div class="image-container" data-note="Bb4,G4,Eb4,Eb3;Eb5,G4,Bb3,Eb3;G4,Eb4,Bb3,Eb3">
+        <img src="assets/minor images/E3.jpeg" alt="Chord Map" class="chord-image">
+        <div class="overlay"></div>
+    </div>
+      <h3>&emsp;&emsp;&emsp;&emsp;&emsp;c: III&emsp;&emsp;&emsp;&emsp;&emsp;III&emsp;&emsp;&emsp;&emsp;III</h3>
+      <h3>&emsp;&emsp;&emsp;&emsp;&emsp;\((\hat{3}\)\(\hat{3}\)\(\hat{5}\)\(\hat{7}\))
+        &emsp;&emsp;\(\quad(\hat{3}\)\(\hat{3}\)\(\hat{5}\)\(\hat{7}\))
+        &emsp;&nbsp;\(\quad(\hat{3}\)\(\hat{3}\)\(\hat{5}\)\(\hat{7}\))</h3>
     </div>
 
     <div class="container">
       <div>
-        <h3>Following Chord</h3>
+        <h4>Following Chord</h4>
       </div>
 
       <div class="buttons">
@@ -129,7 +135,8 @@
         <p>&copy; 2024 Steps to Chord Progressions | All Rights Reserved.</p>
       </div>
     </div>
-    
+
+    <script src="audio.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
