@@ -13,21 +13,25 @@ body {
   background-color: #62c1d5;
   color: rgb(0, 0, 0);
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   position: fixed;
   width: 100%;
   top: 0;
+}
+
+.header .logo {
   font-size: 30px;
   font-weight: bold;
   line-height: 1.2;
-  z-index: 5;
 }
 
 .logo img {
-  width: 200px;
+  width: 250px;
   height: auto;
+  margin-top: -5px;
 }
 
+/* Navbar Styles */
 .navbar {
   background: linear-gradient(
     120deg,
@@ -41,8 +45,9 @@ body {
   padding: 4px 0;
   position: fixed;
   width: 100%;
-  top: 145px;
+  top: 200px;
   z-index: 5;
+  margin-top: -10px;
 }
 
 .nav-list {
@@ -53,13 +58,8 @@ body {
   margin: 0;
 }
 
-.nav-list li {
-  position: relative;
-  margin: 0 20px;
-}
-
 .nav-list a {
-  color: #000;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   padding: 10px 20px;
   display: block;
@@ -69,14 +69,14 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.nav-list a:hover {
-  background-color: #d4f0f0;
+.nav-list a {
+  text-decoration: none;
   color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  letter-spacing: 1px;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -91,6 +91,38 @@ body {
   display: block;
 }
 
+/* Responsive adjustments */
+.nav-list {
+  display: none; /* Hide nav-list by default on small screens */
+  flex-direction: column; /* Stack items vertically */
+  background-color: #ffe57a; /* Background for dropdown */
+  position: absolute;
+  top: 60px; /* Position below the navbar */
+  right: 0;
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for dropdown */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+  z-index: 10; /* Ensure dropdown is above other elements */
+}
+
+/* Show the menu when active */
+.nav-list.active {
+  display: flex; /* Show nav-list when toggled */
+}
+
+.nav-list li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.nav-list a:hover {
+  background-color: #d4f0f0;
+  color: #000000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
 .dropdown-content a {
   color: rgb(0, 0, 0);
   padding: 12px 16px;
@@ -101,6 +133,35 @@ body {
 
 .dropdown-content a:hover {
   background-color: #d4f0f0;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 24px; /* Size of the hamburger icon */
+  cursor: pointer;
+  margin-left: auto; /* Align to the right */
+  padding: 10px; /* Padding for the button */
+  color: #000; /* Color of the icon */
+}
+
+/* Large screen adjustments */
+@media (min-width: 768px) {
+  .nav-list {
+    display: flex; /* Show nav-list as flex on larger screens */
+    flex-direction: row; /* Row layout for large screens */
+    position: static; /* Position static on larger screens */
+    background: none; /* No background for nav-list */
+    box-shadow: none; /* No shadow for nav-list */
+    width: auto; /* Width auto for nav-list */
+    padding: 0; /* No padding */
+  }
+
+  .menu-toggle {
+    display: none; /* Hide hamburger on larger screens */
+  }
 }
 
 h2 {
@@ -125,129 +186,129 @@ h2:hover {
 }
 
 .NavContainer {
-  position: relative; 
-  display: inline-block; 
+  position: relative;
+  display: inline-block;
   margin-top: -180px;
   margin-left: 100px;
 }
 
 .back-arrow {
-  font-size: 50px; 
-  color: #000000; 
-  text-decoration: none; 
-  display: inline-block; 
-  padding: 3px 10px; 
-  background:rgb(223, 220, 220);
-  border-radius: 50%; 
-  transition: all 0.3s ease; 
-  box-shadow: 0px 1px 2px  rgb(0, 0, 0);
+  font-size: 50px;
+  color: #000000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgb(223, 220, 220);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0px 1px 2px rgb(0, 0, 0);
 }
 
 .back-arrow:hover {
-  color: #fff; 
+  color: #fff;
   background: #62c1d5;
-  transform: scale(1.1) rotate(10deg); 
+  transform: scale(1.1) rotate(10deg);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hover-text {
-  visibility: hidden; 
+  visibility: hidden;
   opacity: 0;
   position: absolute;
   top: 50%;
-  left: 120%; 
-  transform: translateY(-50%); 
-  background-color: #333; 
-  color: #ffffff; 
-  padding: 12px 18px; 
-  border-radius: 8px; 
+  left: 120%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 8px;
   font-size: 14px;
-  font-family: "Arial", sans-serif; 
-  white-space: nowrap; 
-  transition: opacity 0.3s ease, transform 0.3s ease; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  max-width: 300px; 
-  z-index: 10; 
+  font-family: "Arial", sans-serif;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  z-index: 10;
 }
 
 .NavContainer:hover .hover-text {
-  visibility: visible; 
-  opacity: 1; 
-  transform: translateY(-50%) translateX(12px); 
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-50%) translateX(12px);
 }
 
 .hover-text::before {
-  content: ""; 
+  content: "";
   position: absolute;
   top: 50%;
-  left: -10px; 
+  left: -10px;
   transform: translateY(-50%);
   border-left: 10px solid #333;
-  border-top: 5px solid transparent; 
-  border-bottom: 5px solid transparent; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 }
 
 .NavContainer:hover .back-arrow {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .containerImages {
   padding: 20px;
   width: 100%;
   margin-left: 150px;
-  margin-top: 48rem; 
-  font-family: 'Times New Roman', Times, serif; 
-  font-size: 20px; 
+  margin-top: 48rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
 }
 
 .containerImages h3 {
   text-align: left;
-  line-height: 1.2; 
-  margin: 10px 0; 
+  line-height: 1.2;
+  margin: 10px 0;
   font-weight: normal;
 }
 
 .containerImages p {
   text-align: left;
-  margin: 70px 0 10px; 
+  margin: 70px 0 10px;
   font-weight: normal;
 }
 
 .containerImages .highlighted {
-  color: red; 
-  font-weight: normal; 
+  color: red;
+  font-weight: normal;
 }
 
 .containerImages img {
-  width: 500px; 
-  height: auto; 
-  max-width: 100%; 
+  width: 500px;
+  height: auto;
+  max-width: 100%;
 }
 
 .containerImages .image-container {
-  margin: -2px 0; 
-  padding: 0;    
+  margin: -2px 0;
+  padding: 0;
 }
 
 .containerImages .chord-image {
-  display: block;    
-  margin: 0 auto; 
+  display: block;
+  margin: 0 auto;
 }
 
 .image-container {
   position: relative;
   display: inline-block;
-  cursor: grab; 
-  max-width: 100%; 
+  cursor: grab;
+  max-width: 100%;
   margin: 1rem auto;
-  transition: border 0.3s ease, transform 0.3s ease; 
+  transition: border 0.3s ease, transform 0.3s ease;
 }
 
 .chord-image {
   display: block;
   width: 100%;
-  height: auto; 
-  max-width: 100%; 
+  height: auto;
+  max-width: 100%;
 }
 
 .overlay {
@@ -256,49 +317,48 @@ h2:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 182, 182, 0.849); 
+  background-color: rgba(255, 182, 182, 0.849);
   opacity: 0;
-  pointer-events: none; 
-  transition: opacity 0.3s ease; 
-  animation: colorCycle 3s infinite alternate; 
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: colorCycle 3s infinite alternate;
 }
 
 @keyframes colorCycle {
   0% {
-      background-color: rgba(255, 87, 87, 0.3); 
+    background-color: rgba(255, 87, 87, 0.3);
   }
   20% {
-      background-color: rgba(255, 215, 87, 0.4); 
+    background-color: rgba(255, 215, 87, 0.4);
   }
   40% {
-      background-color: rgba(87, 173, 255, 0.5); 
+    background-color: rgba(87, 173, 255, 0.5);
   }
   60% {
-      background-color: rgba(147, 112, 219, 0.4); 
+    background-color: rgba(147, 112, 219, 0.4);
   }
   80% {
-      background-color: rgba(87, 255, 131, 0.3); 
+    background-color: rgba(87, 255, 131, 0.3);
   }
   100% {
-      background-color: rgba(255, 87, 87, 0.3);
+    background-color: rgba(255, 87, 87, 0.3);
   }
 }
-
 
 .image-container.active .overlay {
   opacity: 1;
 }
 
 .image-container:active {
-  transform: scale(1); 
+  transform: scale(1);
   box-shadow: 0 4px 8px rgb(0, 0, 0);
-  cursor: grabbing; 
-  border: 10px solid transparent; 
-  border-radius: 30px; 
-  background-image: linear-gradient(45deg, #009dbc, #00f2ff); 
+  cursor: grabbing;
+  border: 10px solid transparent;
+  border-radius: 30px;
+  background-image: linear-gradient(45deg, #009dbc, #00f2ff);
   background-clip: border-box;
-  box-shadow: 0 10px 15px rgb(0, 0, 0), 0 0 15px rgb(98, 193, 213); 
-  animation: border-animation 10s ease-in-out infinite alternate; 
+  box-shadow: 0 10px 15px rgb(0, 0, 0), 0 0 15px rgb(98, 193, 213);
+  animation: border-animation 10s ease-in-out infinite alternate;
 }
 
 .container {
@@ -306,7 +366,7 @@ h2:hover {
   width: 400px;
   text-align: center;
   background: #e0f6f8;
-  box-shadow: 0px 1px 2px  rgb(0, 0, 0);
+  box-shadow: 0px 1px 2px rgb(0, 0, 0);
   border-radius: 25px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin-right: 200px;
@@ -332,7 +392,7 @@ h4 {
   text-align: center;
   width: 100%;
   font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 button {
@@ -343,7 +403,7 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   background: linear-gradient(135deg, #62c1d5, #62c1d5);
-  box-shadow: 0px 1px 2px  rgb(0, 0, 0);
+  box-shadow: 0px 1px 2px rgb(0, 0, 0);
   letter-spacing: 1px;
   text-transform: none;
   margin: 5px 0;
@@ -381,10 +441,9 @@ button.chord {
   object-fit: contain;
 }
 
-
 .footer {
   position: absolute;
-  bottom: -40rem; 
+  bottom: -40rem;
   width: 100%;
   background-color: #62c1d5;
   color: #f3f3f3;
@@ -583,7 +642,6 @@ button.chord {
   margin-left: 10px;
 }
 
-
 button:disabled {
   background-color: #9a9898;
   color: #000000;
@@ -591,16 +649,16 @@ button:disabled {
 }
 
 button#I-button:disabled:hover img {
-  content: url('assets/chord/disI.jpg'); 
+  content: url("assets/chord/disI.jpg");
 }
 
 button#iii-button:disabled:hover img {
-  content: url('assets/chord/disIII.jpg'); 
+  content: url("assets/chord/disIII.jpg");
 }
 
 button#IV-button:disabled:hover img {
-  content: url('assets/chord/disIV.jpg'); 
+  content: url("assets/chord/disIV.jpg");
 }
 button#V-button:disabled:hover img {
-  content: url('assets/chord/disV.jpg'); 
+  content: url("assets/chord/disV.jpg");
 }

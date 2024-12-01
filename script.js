@@ -1,3 +1,13 @@
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navList = document.querySelector(".nav-list");
+
+  menuToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+  });
+});
+
 const majorButton = document.getElementById("major-button");
 if (majorButton) {
   majorButton.addEventListener("click", function () {
@@ -54,7 +64,7 @@ if (viiButton) {
   });
 }
 
-const mrButton = document.getElementById("minor-button"); 
+const mrButton = document.getElementById("minor-button");
 if (mrButton) {
   mrButton.addEventListener("click", function () {
     window.location.href = "minor_keys.html";
@@ -117,53 +127,57 @@ if (viiButtonMinor) {
   });
 }
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  const emailInput = document.getElementById("email").value;
-  const emailPattern = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,6}$/;
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    const emailInput = document.getElementById("email").value;
+    const emailPattern = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,6}$/;
 
-  if (!emailPattern.test(emailInput)) {
-    event.preventDefault();  
-    alert("Please enter a valid email address.");
-  }
-});
+    if (!emailPattern.test(emailInput)) {
+      event.preventDefault();
+      alert("Please enter a valid email address.");
+    }
+  });
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  const botCheck = document.querySelector('input[name="botcheck"]:checked');
-  if (botCheck) {
-    alert("Bot detected! Form submission blocked.");
-    event.preventDefault(); 
-  }
-});
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    const botCheck = document.querySelector('input[name="botcheck"]:checked');
+    if (botCheck) {
+      alert("Bot detected! Form submission blocked.");
+      event.preventDefault();
+    }
+  });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
-  const successContainer = document.getElementById('successContainer');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const successContainer = document.getElementById("successContainer");
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); 
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
         body: formData,
       });
 
       if (response.ok) {
-        form.style.display = 'none'; 
-        successContainer.style.display = 'block'; 
+        form.style.display = "none";
+        successContainer.style.display = "block";
 
         setTimeout(() => {
-          successContainer.style.display = 'none';
-          form.reset(); 
-          form.style.display = 'block'; 
-        }, 3000); 
+          successContainer.style.display = "none";
+          form.reset();
+          form.style.display = "block";
+        }, 3000);
       } else {
-        alert('Oops! Something went wrong. Please try again.');
+        alert("Oops! Something went wrong. Please try again.");
       }
     } catch (error) {
-      alert('An unexpected error occurred. Please try again later.');
+      alert("An unexpected error occurred. Please try again later.");
     }
   });
 });

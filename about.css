@@ -2,38 +2,29 @@
   background-color: #62c1d5;
   color: rgb(0, 0, 0);
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   position: fixed;
   width: 100%;
   top: 0;
 }
 
-.header {
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.logo img {
-  width: 200px;
-  height: auto;
-  margin-top: 0px;
-}
-
+/* Navbar Styles */
 .navbar {
-  background: linear-gradient(120deg, 
-  #ffe57a 0%, 
-  #c4e3e1 20%, 
-  #ffe57a 40%,
-  #c4e3e1 60%,
-  #ffe57a 80%, 
-  #c4e3e1 100%);
+  background: linear-gradient(
+    120deg,
+    #ffe57a 0%,
+    #c4e3e1 20%,
+    #ffe57a 40%,
+    #c4e3e1 60%,
+    #ffe57a 80%,
+    #c4e3e1 100%
+  );
   padding: 4px 0;
   position: fixed;
   width: 100%;
-  top: 200px; 
+  top: 200px;
   z-index: 5;
-  margin-top: -60px;
+  margin-top: -10px;
 }
 
 .nav-list {
@@ -42,11 +33,6 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-}
-
-.nav-list li {
-  position: relative;
-  margin: 0 20px;
 }
 
 .nav-list a {
@@ -66,17 +52,8 @@
   padding: 10px 20px;
   display: inline-block;
   border-radius: 4px;
-  transition: all 0.3s ease;  
+  transition: all 0.3s ease;
 }
-
-.nav-list a:hover {
-  background-color: #d4f0f0;
-  color: #000000;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  letter-spacing: 1px;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -91,6 +68,38 @@
   display: block;
 }
 
+/* Responsive adjustments */
+.nav-list {
+  display: none; /* Hide nav-list by default on small screens */
+  flex-direction: column; /* Stack items vertically */
+  background-color: #ffe57a; /* Background for dropdown */
+  position: absolute;
+  top: 60px; /* Position below the navbar */
+  right: 0;
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for dropdown */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+  z-index: 10; /* Ensure dropdown is above other elements */
+}
+
+/* Show the menu when active */
+.nav-list.active {
+  display: flex; /* Show nav-list when toggled */
+}
+
+.nav-list li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.nav-list a:hover {
+  background-color: #d4f0f0;
+  color: #000000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
 .dropdown-content a {
   color: rgb(0, 0, 0);
   padding: 12px 16px;
@@ -98,15 +107,53 @@
   text-decoration: none;
   display: block;
 }
+.logo img {
+  width: 250px;
+  height: auto;
+  margin-top: -5px;
+}
+.header .logo {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+}
 
 .dropdown-content a:hover {
   background-color: #d4f0f0;
 }
 
+/* Hamburger menu styles */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 24px; /* Size of the hamburger icon */
+  cursor: pointer;
+  margin-left: auto; /* Align to the right */
+  padding: 10px; /* Padding for the button */
+  color: #000; /* Color of the icon */
+}
+
+/* Large screen adjustments */
+@media (min-width: 768px) {
+  .nav-list {
+    display: flex; /* Show nav-list as flex on larger screens */
+    flex-direction: row; /* Row layout for large screens */
+    position: static; /* Position static on larger screens */
+    background: none; /* No background for nav-list */
+    box-shadow: none; /* No shadow for nav-list */
+    width: auto; /* Width auto for nav-list */
+    padding: 0; /* No padding */
+  }
+
+  .menu-toggle {
+    display: none; /* Hide hamburger on larger screens */
+  }
+}
 .about-title {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #000000; 
+  color: #000000;
   margin-bottom: 25px;
   letter-spacing: 2px;
   text-align: center;
@@ -119,7 +166,7 @@
 
 .about-layout {
   max-width: 1000px;
-  margin: 40px auto 0; 
+  margin: 40px auto 0;
   padding: 30px;
   background: whitesmoke;
   border-radius: 12px;
@@ -127,7 +174,7 @@
   font-family: "Poppins", sans-serif;
   line-height: 1.8;
   text-align: center;
-  margin-top: 240px; 
+  margin-top: 240px;
 }
 
 .about-layout p {
