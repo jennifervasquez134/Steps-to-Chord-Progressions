@@ -189,8 +189,8 @@ h2:hover {
 .NavContainer {
   position: relative;
   display: inline-block;
-  margin-top: -180px;
-  margin-left: 100px;
+  /*margin-top: -180px;
+  margin-left: 100px;*/
 }
 
 .back-arrow {
@@ -256,16 +256,30 @@ h2:hover {
 .content {
   padding: 20px;
   width: 100%;
-  margin-left: 150px;
+  margin-left: 60px;
   margin-top: 48rem;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
 }
 .content h3 {
-  text-align: left;
-  line-height: 1.2;
-  margin: 10px 0;
-  font-weight: normal;
+  font-size: 20px; /* Default font size */
+  white-space: nowrap; /* Prevents line breaks */
+
+  margin: 10px 0; /* Space around each h3 */
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 768px) {
+  .content h3 {
+    font-size: 18px; /* Adjust font size */
+  }
+}
+
+/* Small Screens (Phones) */
+@media screen and (max-width: 480px) {
+  .content h3 {
+    font-size: 14px; /* Smaller font size */
+  }
 }
 
 .content p {
@@ -380,6 +394,14 @@ h2:hover {
     margin-right: 10px; /* Optional: smaller right margin */
     margin-left: 10px; /* Optional: smaller left margin */
   }
+  .content {
+    padding: 20px; /* Reduce padding on smaller screens */
+    margin-right: 10px; /* Optional: smaller right margin */
+    margin-left: 10px; /* Optional: smaller left margin */
+  }
+  h3 {
+    font-size: 18px; /* Smaller size for screens smaller than 768px */
+  }
 }
 
 .container:hover {
@@ -460,7 +482,13 @@ button.chord {
   font-size: 0.9rem;
   margin-top: 30px;
 }
-
+/* Responsive text size for smaller screens */
+@media (max-width: 600px) {
+  /* Adjust the max-width as needed */
+  .footer {
+    font-size: 0.75rem; /* Smaller font size for small screens */
+  }
+}
 .footer p {
   margin: 5px 0;
 }
