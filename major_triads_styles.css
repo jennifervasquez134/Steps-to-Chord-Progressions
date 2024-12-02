@@ -253,7 +253,7 @@ h2:hover {
   transform: scale(1.1);
 }
 
-.containerImages {
+.content {
   padding: 20px;
   width: 100%;
   margin-left: 150px;
@@ -261,37 +261,36 @@ h2:hover {
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
 }
-
-.containerImages h3 {
+.content h3 {
   text-align: left;
   line-height: 1.2;
   margin: 10px 0;
   font-weight: normal;
 }
 
-.containerImages p {
+.content p {
   text-align: left;
   margin: 70px 0 10px;
   font-weight: normal;
 }
 
-.containerImages .highlighted {
+.content .highlighted {
   color: red;
   font-weight: normal;
 }
 
-.containerImages img {
+.content img {
   width: 500px;
   height: auto;
   max-width: 100%;
 }
 
-.containerImages .image-container {
+.content .image-container {
   margin: -2px 0;
   padding: 0;
 }
 
-.containerImages .chord-image {
+.content .chord-image {
   display: block;
   margin: 0 auto;
 }
@@ -373,6 +372,16 @@ h2:hover {
   margin-right: 200px;
   margin-top: 48rem;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px; /* Reduce padding on smaller screens */
+    margin-right: 10px; /* Optional: smaller right margin */
+    margin-left: 10px; /* Optional: smaller left margin */
+  }
+}
+
 .container:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 10);
