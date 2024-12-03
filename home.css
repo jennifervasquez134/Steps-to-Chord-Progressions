@@ -1,3 +1,4 @@
+
 body {
   justify-content: center;
   align-items: center;
@@ -288,7 +289,7 @@ ul.bullets li::before {
 }
 .footer {
   position: absolute;
-  bottom: -20rem;
+  bottom: -25rem;
   width: 100%;
   background-color: #62c1d5;
   color: #f3f3f3;
