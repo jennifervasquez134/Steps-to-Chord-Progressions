@@ -42,7 +42,7 @@ h2 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 210px;
+  top: 280px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -67,7 +67,7 @@ h3 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 290px;
+  top: 350px;
   left: 50%;
   transform: translateX(-50%);
 }
