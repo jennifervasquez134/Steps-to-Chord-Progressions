@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .body2 {
   margin: 0;
   display: flex;
@@ -28,17 +34,19 @@
 }
 
 .navbar {
-  background: linear-gradient(120deg, 
-  #ffe57a 0%, 
-  #c4e3e1 20%, 
-  #ffe57a 40%,
-  #c4e3e1 60%,
-  #ffe57a 80%, 
-  #c4e3e1 100%);
+  background: linear-gradient(
+    120deg,
+    #ffe57a 0%,
+    #c4e3e1 20%,
+    #ffe57a 40%,
+    #c4e3e1 60%,
+    #ffe57a 80%,
+    #c4e3e1 100%
+  );
   padding: 4px 0;
   position: fixed;
   width: 100%;
-  top: 200px; 
+  top: 200px;
   z-index: 5;
   margin-top: -60px;
 }
@@ -73,7 +81,7 @@
   padding: 10px 20px;
   display: inline-block;
   border-radius: 4px;
-  transition: all 0.3s ease;  
+  transition: all 0.3s ease;
 }
 
 .nav-list a:hover {
@@ -121,7 +129,6 @@
   padding-top: 30px;
   margin-top: 170px;
 }
-
 
 .contact-image img {
   width: 600px;
@@ -203,12 +210,12 @@ textarea {
 }
 
 .success-container {
-  display: none; 
+  display: none;
   position: fixed;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   width: 300px;
   padding: 30px;
@@ -216,17 +223,17 @@ textarea {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   color: #28a745;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .success-icon {
-  width: 120px; 
-  height: 120px; 
+  width: 120px;
+  height: 120px;
   margin: 0 auto 15px;
   position: relative;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .checkmark-svg {
@@ -237,33 +244,33 @@ textarea {
 
 .checkmark-svg circle {
   fill: white;
-  stroke:  #28a745; 
-  stroke-width: 0.5px
+  stroke: #28a745;
+  stroke-width: 0.5px;
 }
 
 .checkmark-svg path {
-  stroke: #28a745; 
-  stroke-width: 1.0px; 
-  fill: none; 
+  stroke: #28a745;
+  stroke-width: 1px;
+  fill: none;
 }
 
 .success-text h3 {
-  font-size: 22px; 
+  font-size: 22px;
   color: #ffffff;
   margin-top: 10px;
-  font-family: 'Times New Roman', Times, serif;
-  text-transform: uppercase; 
-  letter-spacing: 2px; 
-  font-weight: 600; 
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-  word-wrap: break-word; 
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
 }
 
 .success-text p {
   font-size: 20px;
   color: #fff;
   margin-top: 5px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .footer {
