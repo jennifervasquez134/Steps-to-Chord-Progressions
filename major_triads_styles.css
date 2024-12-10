@@ -696,3 +696,17 @@ button#IV-button:disabled:hover img {
 button#V-button:disabled:hover img {
   content: url("assets/chord/disV.jpg");
 }
+
+@media (max-width: 768px) {
+
+.soundButton-container {
+
+  right: -1rem;
+}
+
+.sound-button {
+  padding: 0.2rem;
+  width: 2rem; 
+  height: 2rem; 
+ }
+}
