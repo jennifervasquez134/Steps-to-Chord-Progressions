@@ -277,10 +277,10 @@ button.chord {
     display: none; 
   }
 }
-
 .footer {
   position: absolute;
-  margin-bottom: -80rem;
+  bottom: 0;
+  margin-bottom: -500px;
   margin-top: 10rem;
   width: 100%;
   background-color: #62c1d5;
@@ -288,10 +288,12 @@ button.chord {
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .footer p {
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .footer a {
@@ -306,6 +308,6 @@ button.chord {
 .footer-logo img {
   max-width: 250px;
   height: auto;
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
