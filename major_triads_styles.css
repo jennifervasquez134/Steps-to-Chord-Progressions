@@ -702,6 +702,7 @@ button#V-button:disabled:hover img {
 .soundButton-container {
 
   right: -1rem;
+  margin-top: 1rem;
 }
 
 .sound-button {
