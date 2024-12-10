@@ -740,6 +740,7 @@ button#vii1-mrbutton:disabled:hover img {
 .soundButton-container {
 
   right: -1rem;
+  margin-top: 1rem;
 }
 
 .sound-button {
